@@ -7,7 +7,6 @@ $(() => {
 })
 
 let fetchListOfMovies = (searchTermString) => {
-    let baseURL = `http://www.omdbapi.com/?s=${searchTermString}&apikey=1efcc1a3`;
     axios.get(baseURL).then((response) => {
         let titleOfMoviesResponse = response.data.Search;
         let html = '';
